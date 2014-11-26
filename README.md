@@ -1,6 +1,6 @@
 # Hipster Theme
 
-
+Available in MELPA
 
   **Recommendation:**
         To use this theme in all its beauty, turn your transparent emacs with the following code in init.el
