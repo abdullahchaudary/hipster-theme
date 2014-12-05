@@ -1,9 +1,8 @@
-;;; hipster-theme.el --- A low contrast color theme
+;;; hipster-theme.el --- A low contrast color theme for Emacs.
 
 ;; Author: Luis Angel <redshacker11@gmail.com>
 ;; URL: http://github.com/xzerocode/hispter-theme
-;; Version: 0.2
-;; Package-Requires: ((emacs "24"))
+;; Version: 0.1
 
 ;;; Commentary:
 
@@ -32,7 +31,7 @@
     ("hipster-bg+1"     . "#4F4F4F")
     ("hipster-bg+2"     . "#5F5F5F")
     ("hipster-bg+3"     . "#6F6F6F")
-    ("hipster-red+1"    . "#DCA3A3")
+    ("hipster-red+1"    . "#dc322f")
     ("hipster-red"      . "#d01A4E")
     ("hipster-red-1"    . "#dc322f")
     ("hipster-red-2"    . "#dc322f")
@@ -44,12 +43,12 @@
     ("hipster-yellow-2" . "#b58900")
     ("hipster-green-1"  . "#7E7D7E")
     ("hipster-green"    . "#7E7D7E")
-    ("hipster-green+1"  . "#8FB28F")
+    ("hipster-green+1"  . "#9FAA9B")
     ("hipster-green+2"  . "#9FC59F")
     ("hipster-green+3"  . "#AFD8AF")
     ("hipster-green+4"  . "#BFEBBF")
     ("hipster-cyan"     . "#2aa198")
-    ("hipster-blue+1"   . "#268bd2")
+    ("hipster-blue+1"   . "#00a74e")
     ("hipster-blue"     . "#268bd2")
     ("hipster-blue-1"   . "#268bd2")
     ("hipster-blue-2"   . "#268bd2")
@@ -200,15 +199,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(popup-scroll-bar-background-face ((t (:background ,hipster-bg-1))))
    `(popup-isearch-match ((t (:background ,hipster-bg :foreground ,hipster-fg))))
 ;;;;; company-mode
-   `(company-tooltip ((t (:foreground ,hipster-fg :background ,hipster-bg+1))))
+   `(company-tooltip ((t (:foreground ,hipster-yellow :background ,hipster-bg+1))))
    `(company-tooltip-selection ((t (:foreground ,hipster-fg :background ,hipster-bg-1))))
    `(company-tooltip-mouse ((t (:background ,hipster-bg-1))))
-   `(company-tooltip-common ((t (:foreground ,hipster-green+2))))
-   `(company-tooltip-common-selection ((t (:foreground ,hipster-green+2))))
-   `(company-scrollbar-fg ((t (:background ,hipster-bg-1))))
-   `(company-scrollbar-bg ((t (:background ,hipster-bg+2))))
-   `(company-preview ((t (:background ,hipster-green+2))))
-   `(company-preview-common ((t (:foreground ,hipster-green+2 :background ,hipster-bg-1))))
+   `(company-tooltip-common ((t (:foreground ,hipster-yellow :background ,hipster-bg-1))))
+   `(company-tooltip-common-selection ((t (:background ,hipster-bg-1))))
+   `(company-scrollbar-fg ((t (:background ,hipster-green+1))))
+   `(company-scrollbar-bg ((t (:background ,hipster-bg-1))))
+   `(company-preview ((t (:background ,hipster-green+1))))
+   `(company-preview-common ((t (:background ,hipster-bg-1))))
 ;;;;; bm
    `(bm-face ((t (:background ,hipster-yellow-1 :foreground ,hipster-bg))))
    `(bm-fringe-face ((t (:background ,hipster-yellow-1 :foreground ,hipster-bg))))
@@ -230,9 +229,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diff-changed ((t (:foreground ,hipster-yellow))))
    `(diff-removed ((,class (:foreground ,hipster-red :background nil))
                    (t (:foreground ,hipster-red-3 :background nil))))
-   `(diff-refine-added ((t (:inherit diff-added :weight bold))))
-   `(diff-refine-change ((t (:inherit diff-changed :weight bold))))
-   `(diff-refine-removed ((t (:inherit diff-removed :weight bold))))
+   `(diff-refine-added ((t :inherit diff-added :weight bold)))
+   `(diff-refine-change ((t :inherit diff-changed :weight bold)))
+   `(diff-refine-removed ((t :inherit diff-removed :weight bold)))
    `(diff-header ((,class (:background ,hipster-bg+2))
                   (t (:background ,hipster-fg :foreground ,hipster-bg))))
    `(diff-file-header
@@ -299,11 +298,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(egg-diff-file-header ((t (:foreground ,hipster-yellow-2))))
    `(egg-section-title ((t (:foreground ,hipster-yellow))))
    `(egg-stash-mono ((t (:foreground ,hipster-green+4))))
-;;;;; elfeed
-   `(elfeed-search-date-face ((t (:foreground ,hipster-yellow-1 :underline t
-                                              :weight bold))))
-   `(elfeed-search-tag-face ((t (:foreground ,hipster-green))))
-   `(elfeed-search-feed-face ((t (:foreground ,hipster-cyan))))
 ;;;;; emacs-w3m
    `(w3m-anchor ((t (:foreground ,hipster-yellow :underline t
                                  :weight bold))))
@@ -593,7 +587,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(macrostep-macro-face
      ((t (:underline t))))
 ;;;;; magit
-   `(magit-item-highlight ((t (:background ,hipster-bg+05))))
+   `(magit-item-highlight ((t (:background ,hipster-bg+1))))
    `(magit-section-title ((t (:foreground ,hipster-yellow :weight bold))))
    `(magit-process-ok ((t (:foreground ,hipster-green :weight bold))))
    `(magit-process-ng ((t (:foreground ,hipster-red :weight bold))))
@@ -704,7 +698,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-table ((t (:foreground ,hipster-green+2))))
    `(org-tag ((t (:bold t :weight bold))))
    `(org-time-grid ((t (:foreground ,hipster-orange))))
-   `(org-todo ((t (:bold t :foreground ,hipster-red :weight bold))))
+   `(org-todo ((t (:background, hipster-red-1 :bold t :foreground ,hipster-bg :weight bold))))
    `(org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
    `(org-warning ((t (:bold t :foreground ,hipster-red :weight bold :underline nil))))
    `(org-column ((t (:background ,hipster-bg-1))))
@@ -758,18 +752,31 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(proof-tactics-name-face ((t (:inherit font-lock-constant-face :foreground nil :background ,hipster-bg))))
    `(proof-warning-face ((t (:foreground ,hipster-bg :background ,hipster-yellow-1))))
 ;;;;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((t (:foreground ,hipster-fg))))
-   `(rainbow-delimiters-depth-2-face ((t (:foreground ,hipster-green+4))))
-   `(rainbow-delimiters-depth-3-face ((t (:foreground ,hipster-yellow-2))))
-   `(rainbow-delimiters-depth-4-face ((t (:foreground ,hipster-cyan))))
-   `(rainbow-delimiters-depth-5-face ((t (:foreground ,hipster-green+2))))
-   `(rainbow-delimiters-depth-6-face ((t (:foreground ,hipster-blue+1))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground ,hipster-yellow-1))))
-   `(rainbow-delimiters-depth-8-face ((t (:foreground ,hipster-green+1))))
-   `(rainbow-delimiters-depth-9-face ((t (:foreground ,hipster-blue-2))))
-   `(rainbow-delimiters-depth-10-face ((t (:foreground ,hipster-orange))))
-   `(rainbow-delimiters-depth-11-face ((t (:foreground ,hipster-green))))
-   `(rainbow-delimiters-depth-12-face ((t (:foreground ,hipster-blue-5))))
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,hipster-cyan))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,hipster-yellow))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,hipster-blue+1))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,hipster-red+1))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,hipster-green+1))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,hipster-blue-1))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,hipster-orange))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,hipster-magenta))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,hipster-yellow-2))))
+   `(rainbow-delimiters-depth-10-face ((t (:foreground ,hipster-green+2))))
+   `(rainbow-delimiters-depth-11-face ((t (:foreground ,hipster-blue+1))))
+   `(rainbow-delimiters-depth-12-face ((t (:foreground ,hipster-red-4))))
+;;;;; rainbow-delimiters
+   ;; `(rainbow-delimiters-depth-1-face ((t (:foreground ,hipster-fg))))
+   ;; `(rainbow-delimiters-depth-2-face ((t (:foreground ,hipster-green+4))))
+   ;; `(rainbow-delimiters-depth-3-face ((t (:foreground ,hipster-yellow-2))))
+   ;; `(rainbow-delimiters-depth-4-face ((t (:foreground ,hipster-cyan))))
+   ;; `(rainbow-delimiters-depth-5-face ((t (:foreground ,hipster-green+2))))
+   ;; `(rainbow-delimiters-depth-6-face ((t (:foreground ,hipster-blue+1))))
+   ;; `(rainbow-delimiters-depth-7-face ((t (:foreground ,hipster-yellow-1))))
+   ;; `(rainbow-delimiters-depth-8-face ((t (:foreground ,hipster-green+1))))
+   ;; `(rainbow-delimiters-depth-9-face ((t (:foreground ,hipster-blue-2))))
+   ;; `(rainbow-delimiters-depth-10-face ((t (:foreground ,hipster-orange))))
+   ;; `(rainbow-delimiters-depth-11-face ((t (:foreground ,hipster-green))))
+   ;; `(rainbow-delimiters-depth-12-face ((t (:foreground ,hipster-blue-5))))
 ;;;;; rcirc
    `(rcirc-my-nick ((t (:foreground ,hipster-blue))))
    `(rcirc-other-nick ((t (:foreground ,hipster-orange))))
@@ -1025,8 +1032,14 @@ This requires library `rainbow-mode'.")
                    (file-name-directory load-file-name))))
 
 (provide-theme 'hipster)
+
+;;;###autoload
+(add-to-list 'safe-local-eval-forms
+             '(when (require 'rainbow-mode nil t) (rainbow-mode 1)))
+
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
+;; eval: (when (require 'rainbow-mode nil t) (rainbow-mode 1))
 ;; End:
 ;;; hipster-theme.el ends here
